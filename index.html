@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="text-real-killer">Real Killer</div>
+    <div class="circle">
+      <img src="image.png" alt="Your Image" />
+    </div>
+    <div id="wanted-text">Wanted</div>
+    <div class="text-bounty">$ 19,000,000</div>
+</div>
+<style>
+    @font-face {
+         font-family: 'DungGeunMo';
+         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+         font-weight: 200;
+         font-style: normal;
+    }
+
+    body{
+        font-family: 'DungGeunMo';
+        background-color: black;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* viewport height로 설정하여 화면의 전체 높이를 차지하도록 함 */
+    }
+
+    .text-real-killer, .text-bounty {
+      color: white;
+      font-size: 50px;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .circle img {
+      display: inline;
+      margin: 0 auto;
+      height: 100%;
+      width: auto;
+    }
+
+    #wanted-text {
+      color: red;
+      font-size: 50px;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+      visibility: visible;
+    }
+
+</style>  
+<script>
+    setInterval(function() {
+      let wantedText = document.getElementById("wanted-text");
+      if (wantedText.style.visibility === "hidden") {
+        wantedText.style.visibility = "visible";
+      } else {
+        wantedText.style.visibility = "hidden";
+      }
+    }, 500); // 500ms 마다 깜빡임 효과 발생
+
+</script>
